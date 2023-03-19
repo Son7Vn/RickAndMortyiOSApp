@@ -8,12 +8,18 @@
 import UIKit
 
 final class RMTabViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("View DidLoad")
         setupTabs()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("View Will Appear")
+    }
+    
     private func setupTabs() {
         let characterVC = RMCharacterViewController()
         let locationVC = RMLocationViewController()
